@@ -1,0 +1,66 @@
+/*html*/
+html {
+    border: 25px solid #76462E;
+    background-color:#F9EEDC;
+}
+
+/*header*/
+h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 3em;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.box {
+    width: 100%;
+    height: auto;
+    max-width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+/*body*/
+.animalPic {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    border-radius: 5px;
+}
+
+h2, h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 50px;
+}
+
+ h4, h5 ,h6 {
+    font-size: 18pt;
+}
+
+p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16pt;
+}
+
+li {
+    font-size: 16pt;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.wikiLink, a {
+    color: #76462E;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+a:hover {
+    color: black
+}
+
+/*footer*/
+.welcome {
+    margin: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}

@@ -27,5 +27,5 @@ console.log(sentence);
 //
 let greeting = "Hello";
 let iAm = "I am";
-let name = "Davonne";
-let message = alert(greeting + " " + iAm + " " + name);
+let myName = "Davonne";
+let message = alert(greeting + " " + iAm + " " + Myname);

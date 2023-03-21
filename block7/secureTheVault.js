@@ -1,5 +1,6 @@
 // Declaring a variable 'importantVault' to a string message
     //CONSOLE.LOG for the variable 'importantVault' to show the string message
+    //CONSOLE.LOG typeof to show what the type of is for the variable 'importantVault'
 
 // Declare a variable 'numOne' to 2 + 8, making the value 10
 // Declare a variable 'numTwo' to 10 + 120 / 4, making the value 40
@@ -8,8 +9,8 @@
 //ALERT a pop up alert message to add all the variables together
   //add them together by using a string concatenation and " " to add spaces and a dash between numbers
 
-
 const importantVault = "You have received this message because you have been chosen to open an important vault. Here is the secret combination:";
+console.log(typeof importantVault);
 console.log(importantVault);
 
 let numOne = 2 + 8;

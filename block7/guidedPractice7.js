@@ -28,4 +28,4 @@ console.log(sentence);
 let greeting = "Hello";
 let iAm = "I am";
 let myName = "Davonne";
-let message = alert(greeting + " " + iAm + " " + Myname);
+let message = alert(greeting + " " + iAm + " " + myName);

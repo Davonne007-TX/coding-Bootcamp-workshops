@@ -1,6 +1,6 @@
 // Declaring a variable 'importantVault' to a string message
-  //CONSOLE.LOG for the variable 'importantVault' to show the string message
-  //CONSOLE.LOG the typeof of the variable 'importantValue' to show the data type
+  //CONSOLE.LOG for the variable 'importantVault' to show the string message in the console
+  //CONSOLE.LOG the typeof of the variable 'importantValue' to show the data type in the console
 
 // Declare a variable 'numOne' to 2 + 8, making the value 10
 // Declare a variable 'numTwo' to 10 + 120 / 4, making the value 40

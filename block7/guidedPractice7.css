@@ -4,9 +4,14 @@ html {
 }
 
 h1 {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
     font-size: 24pt;
     text-align: center;
     color: white;
     margin-top: 180px;
     font-family: 'Carter One', cursive;
+    background-color: black;
+    border-radius: 15px;
 }

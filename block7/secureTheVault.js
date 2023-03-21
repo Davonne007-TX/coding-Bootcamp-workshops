@@ -7,7 +7,7 @@
 // Declare a variable 'numThree to 15 + 30 - 6, making the value 39
 
 //ALERT a pop up alert message to add all the variables together
-  //add them together by using a string concatenation and " " to add spaces and a dash between numbers
+  //Add them together by using a string concatenation and " " to add spaces and a dash between numbers
 
 
 const importantVault = "You have received this message because you have been chosen to open an important vault. Here is the secret combination:";

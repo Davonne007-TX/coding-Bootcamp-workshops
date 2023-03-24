@@ -2,8 +2,16 @@
 h1 {
     font-family: 'Righteous', cursive;
     text-align: center;
-    color: #DF486C;
+    color: gray;
     font-size: 4em;
     margin-top: 250px;
     text-decoration: underline;
 }
+
+img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+

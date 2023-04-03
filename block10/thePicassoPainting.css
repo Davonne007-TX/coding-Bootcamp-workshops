@@ -1,0 +1,188 @@
+/*heading*/
+h1 {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 3em;
+    font-family: 'Lobster', cursive;
+}
+
+/*boxes*/
+main {
+    position: relative;
+    margin-top: 5px;
+}
+
+.flex-container {
+    display: flex;
+    height: 300px;
+    margin-bottom: 20px;
+}
+
+.flex-container > div {
+    flex: 1;
+    background-color: teal;
+}
+
+.flex-container > div:nth-child(2) {
+    margin: 0 20px 0 20px;
+}
+
+/*second box and last box*/
+.bigBox {
+    height: 450px;
+    background-color: teal;
+    margin-top: 15px;
+}
+
+.skinnyBox {
+    height: 30px;
+    background-color: #8FF773;
+    margin-top: 20px;
+}
+
+/*circles*/
+.pinkTop {
+    width: 50px;
+    height: 50px;
+    background-color: #F278B1;
+    border-radius: 50%;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+    position: absolute;
+}
+
+.pinkRight {
+    width: 50px;
+    height: 50px;
+    background-color:#F278B1;
+    border-radius: 50%;
+    z-index: 2;
+    position: absolute;
+    top: 90px;
+    margin-left: 580px;
+}
+
+.yellowBig {
+    width: 120px;
+    height: 120px;
+    background-color: #F5F773;
+    border-radius: 50%;
+    margin-left: 250px;
+    top: 100px;
+    z-index: 1; 
+    position: absolute;
+}
+
+.leftPink {
+    width: 50px;
+    height: 50px;
+    background-color: #F278B1;
+    border-radius: 50%;
+    z-index: 1; 
+    margin-left: 60px;
+    top: 310px;
+    position: absolute;
+}
+
+.pinkBig {
+    width: 120px;
+    height: 120px;
+    background-color: #F278B1;
+    border-radius: 50%;
+    margin-left: 420px;
+    top: 200px;
+    margin-top: 30px;
+    position: absolute;
+    z-index: 1;
+}
+
+.yellowSmall {
+    width: 50px;
+    height: 50px;
+    background-color: #F5F773;
+    border-radius: 50%;
+    margin-left: 200px;
+    top: 400px;
+    position: absolute;
+}
+
+/*people*/
+.image {
+    width: 300px;
+    position: absolute;
+    z-index: 1;
+    top: 75%;
+    left: 5%;
+}
+
+/*triangles*/
+.triangle {
+    width: 0;
+    height: 0;
+    position: absolute;
+}
+
+.bigTriangle {
+    z-index: 3;
+    border-left: 180px solid transparent;
+    border-right: 180px solid transparent;
+    border-bottom: 520px solid green;
+    left: 50%;
+    top: 30%;
+}
+
+.smallTriangle {
+    border-left: 160px solid transparent;
+    border-right: 160px solid transparent;
+    border-bottom: 280px solid #8FF773;
+    left: 30%;
+    margin-left: 40px;
+    margin-top: 244px;
+    z-index: 1;
+}
+
+/*form*/
+h2 {
+    margin-top: 80px;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 2em;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    font-size: 16pt;
+}
+
+.yourInfo {
+    width: 300px;
+    border-radius: 20px;
+    font-size: 16pt;
+}
+
+.information {
+    display: flex;
+    align-self: center;
+    margin: 20px;
+    column-gap: 10px;
+}
+
+
+.submitForm {
+    align-self: center;
+    width: 300px;
+    background-color: #F278B1;
+    color: white;
+    font-size: 14pt;
+    border-radius: 20px;
+    margin: 20px;
+   font-family: 'Lobster', cursive;
+}
+
+.submitForm:hover {
+    color: #8FF773;
+    cursor: pointer;
+}

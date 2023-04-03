@@ -1,0 +1,20 @@
+/*html*/
+html {
+   background-color: whitesmoke;
+}
+
+/*body*/
+h1 {
+    font-family: 'Lobster', cursive;
+    text-align: center;
+    font-size: 5em;
+    color: pink;
+    text-shadow: 1px 2px black;
+    text-decoration: underline;
+    margin-top: 250px;
+}
+
+p {
+    text-align: center;
+    font-size: 2em;
+}

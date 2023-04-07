@@ -32,14 +32,12 @@ main {
     height: 450px;
     background-color: teal;
     margin-top: 15px;
- 
 }
 
 .skinnyBox {
     height: 30px;
     background-color: #8FF773;
     margin-top: 20px;
-   
 }
 
 /*circles*/
@@ -172,7 +170,6 @@ h2 {
     column-gap: 10px;
 }
 
-
 .submitForm {
     align-self: center;
     width: 300px;
@@ -188,3 +185,4 @@ h2 {
     color: #8FF773;
     cursor: pointer;
 }
+

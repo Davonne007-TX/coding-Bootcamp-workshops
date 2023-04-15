@@ -2,7 +2,7 @@
 // If a number is even, console log, "even"
 // Else, console log, "odd"
 
-const myValue = 4;
+const myValue = 0;
 
 if (myValue % 2 === 0) {
     console.log("even");

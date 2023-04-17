@@ -1,17 +1,18 @@
 // Tab One: Is Truthy
     //Given a value
+        let truthy = "I am a string";
 
-        
+    //if the value is truthy, print true
+        if(truthy === "I am a string") {
+            console.log(true);
+        }
+
+    //else print false
+        else {
+            console.log(false);
+        }
+
     
-   
-
-
-
-
-
-
-
-
 
 //Tab Two: Number Line
     //Given two numbers, set them to variables 
@@ -30,6 +31,7 @@
         else {
             console.log("Sorry, your wrong");
          }
+
 
 
 
@@ -66,6 +68,7 @@
     */
 
 
+        
 //Tab Four: Pair and Compare Continued.... 
     //Wasn't too sure if this is the way I was supposed to do it, or the above code, so I did both 
 

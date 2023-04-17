@@ -51,7 +51,7 @@
         }
 
 
-        
+
 /*
 //Tab Four: Pair and Compare
     //Given two values
@@ -67,7 +67,7 @@
         else {
             console.log(false);
         } 
-    */
+*/   
 
 
 
@@ -90,8 +90,4 @@
         //else print false
         else {
             console.log(false);
-        } 
-        
-
-
-      
+        }     

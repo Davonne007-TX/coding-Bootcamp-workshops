@@ -50,6 +50,8 @@
             console.log(false);
         }
 
+
+        
 /*
 //Tab Four: Pair and Compare
     //Given two values
@@ -68,7 +70,7 @@
     */
 
 
-        
+
 //Tab Four: Pair and Compare Continued.... 
     //Wasn't too sure if this is the way I was supposed to do it, or the above code, so I did both 
 

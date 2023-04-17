@@ -1,5 +1,5 @@
 // Tab One: Is Truthy
-    //Given a value
+    //Given the variable truthy, set it to a string
         let truthy = "I am a string";
 
     //if the value is truthy, print true

@@ -23,7 +23,7 @@
 
     //do an if statement if sum is greater than 0, console log "97 is greater than 0"
         if(sum >= 0) {
-            console.log("97 is greater than 0");
+            console.log(sum + " is greater than 0");
         }
 
     //else print "sorry your wrong"

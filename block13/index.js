@@ -21,7 +21,7 @@
     //set the sum of those variables to another variable named sum
         let sum = num1 + num2;
 
-    //do an if statement if sum is greater than 100, console log "101 is greater than 100"
+    //do an if statement if sum is greater than 0, console log "97 is greater than 0"
         if(sum >= 0) {
             console.log("97 is greater than 0");
         }

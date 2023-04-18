@@ -6,9 +6,9 @@
 */
 
 const cars = ["Honda", "Toyota", "Ford", "Subaru"];
-cars.pop();
-cars.push("Audi");
-cars.shift();
-cars.unshift("Hyundai");
-cars.splice(2,0, "Mercedes");
-console.log(cars);
+    cars.pop();
+    cars.push("Audi");
+    cars.shift();
+    cars.unshift("Hyundai");
+    cars.splice(2,0, "Mercedes");
+    console.log(cars);

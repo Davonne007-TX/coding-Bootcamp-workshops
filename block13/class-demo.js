@@ -28,8 +28,6 @@ if(value) {
 }
 
 
-
-
 //Tab Two: Number Line
 
 /* 
@@ -59,20 +57,4 @@ if (sum < -1000) {
     console.log("sum is equal to 0");
 } else if (sum > 100) {
     console.log()
-
 }
-
-
-
-//Tab Three: Greater than 5
- /*
-    -if num1 and num2 are >5
-      -print true
-    
-    else
-        -print false
- */
-
-
-
-

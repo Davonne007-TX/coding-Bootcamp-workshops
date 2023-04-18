@@ -3,7 +3,7 @@
         let truthy = "I am a string";
 
     //if the value is truthy, print true
-        if(truthy === "I am a string") {
+        if(truthy) {
             console.log(true);
         }
 

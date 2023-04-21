@@ -21,6 +21,7 @@ for(let i = 0; i < myNumbers.length; i++) {
 console.log(oddNumbers);
 
 
+
 // Next Set of Arrays in Only Odds
 
 /*  
@@ -43,7 +44,6 @@ console.log(expectedResults);
 
 
 
-
 //Next Arrays 
 
 /*
@@ -58,9 +58,6 @@ newArrays.pop();
 
 newArrays.splice(0, 2);
 console.log(newArrays);
-
-
-//
 
 
 

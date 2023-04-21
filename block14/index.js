@@ -1,7 +1,6 @@
 // Block 14 Workshop: Loops and Arrays
 
 
-
 /*  Only Odds:
 
      - Write an algorithm that accepts an array of numbers and 

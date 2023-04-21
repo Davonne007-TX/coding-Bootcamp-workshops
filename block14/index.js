@@ -16,3 +16,8 @@ for(let i = 0; i < myNumbers.length; i++) {
     }
 }
 console.log(oddNumbers);
+
+
+//
+
+

@@ -14,6 +14,9 @@ const cars = ["Honda", "Toyota", "Ford", "Subaru"];
     console.log(cars);
 
 
+
+
+    
  /*
     Using loops, count how many "e"s are in the following sentence:
 
@@ -31,3 +34,5 @@ for(let i = 0; i < sentence.length; i++) {
 }
 
 console.log(count);
+
+

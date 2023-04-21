@@ -3,7 +3,7 @@
 
 /*  Only Odds:
 
-     - Write an algorithm that accepts an array of numbers and 
+    Write an algorithm that accepts an array of numbers and 
     returns a new array with only the odd numbers from the original array. 
     If there is only one odd number in the array, return an array with that single value.
     
@@ -27,7 +27,6 @@ console.log(oddNumbers);
     - Declare an empty array, you will use later to console log the expected result
     - Declare a variable with the new set of array numbers
     - Do a for loop, starting at index  1, setting it to less than or equal to 9, and iterating by 2
-    - Do an if statement if to catch all the odd numbers 
     - push the empty array to the declared variable with the iteration 
     - console.log the empty array
 */

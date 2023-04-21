@@ -19,15 +19,13 @@ pets.push("fish", "cat");
 console.log(pets);
 
 
-//for loops
+
+//For loops
 let alphabet = " abcdefghijklmnopqrstuvwxyz";
 for(let i = 0; i < alphabet.length; i++ ) {
     let currentLetters = alphabet[i];
     console.log(currentLetters);
 }
-
-
-
 
 
 

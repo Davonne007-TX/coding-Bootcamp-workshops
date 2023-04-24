@@ -29,8 +29,8 @@ console.log(oddNumbers);
     - Declare an empty array, you will use later to console log the expected result
     - Declare a variable with the new set of array numbers
     - Do a for loop, starting at index  1, setting it to less than or equal to 9, and iterating by 2
-    - push the empty array to the declared variable with the iteration 
-    - console.log the empty array
+    - Push the empty array to the declared variable with the iteration 
+    - Console.log the empty array
 */
 
 let expectedResults = [];
@@ -50,7 +50,7 @@ console.log(expectedResults);
     - Declare a variable with the new set of array of numbers
     - Pop the last element of the array, (get rid of the last number)
     - Remove the first two elements of the array, use the splice method 
-    - console log the declared variable to show the new array
+    - Console log the declared variable to show the new array
 */
 
 let newArrays = [70, 42, 55, 81, 21, 91, 34];
@@ -65,7 +65,7 @@ console.log(newArrays);
 
     
 //Declare an empty array
-let eleven = [];
+const eleven = [];
 
 
 //Make a new array with a new set of numbers you want to test
@@ -100,12 +100,12 @@ console.log(eleven);
     - Set the array of lowercase words you would like to test
     - Create a for loop, that loops the array less than or equal to 4, iterating each time
     - Create an if statement, that catches the array[i] and if its equal to each word
-        - create else if statements for each word in the array
-        - console log how many vowels it has an how many consonants for each word
+        - Create else if statements for each word in the array
+        - Console log how many vowels it has an how many consonants for each word
        
 */
 
-let ourWord = [];
+const ourWord = [];
 let myWords = ["hello", "ukelele", "awesome", "onomonpia", "textbook"];
 
 for(let i = 0; i <= 4; i++) {
@@ -133,24 +133,72 @@ for(let i = 0; i <= 4; i++) {
 
     /*
     
-         Write an algorithm that creates a new array in reverse order.
+         Write an algorithm that creates a new array in reverse order
 
 
+         - Declare an empty array, used later to reverse the given array
+         - Declare the actual array with the numbers you want 
+         - Create a For Loop, that does the length of the array -1,
+            - set it to i >= 0; and do the i-- since we are reversing the array
+        - push the empty array to the the original array[i]
+        - console.log the empty array
+    */
+   
+   let reverseArray = [];
+   let beforeArray = [1, 2, 3];
+
+   for(let i = beforeArray.length -1; i >= 0; i--) {
+        reverseArray.push(beforeArray[i]);
+    }
+
+    console.log(reverseArray);
 
 
+   
 
+    //Next Set of Reverse Arrays
+     
+    /*
 
-
+        - Declare an empty array
+        - Set an array to the elements you want, in this case an array of numbers
+        - Create a for loop, looping the arrays length, and setting i less then or equal to 1
+            - with the iteration being i--
+        - push empty array to the original array[i]
+        - console.log the empty array to show the array in reversed order
     */
 
 
+     
+   let myOtherReverseArray = [];
+   let otherArray = [1, 3, 5, 7, 9, 11];
+
+   for(let i = otherArray.length -1; i >= 0; i--) {
+        myOtherReverseArray.push(otherArray[i]);
+    }
+
+    console.log(myOtherReverseArray);
 
 
 
+    //Next Set of Reverse Arrays
 
+    /*
 
+        - Declare an array with  the numbers you want to
+        - Declare a variable you want for the reversed array
+          - assign that variable to the array and use the slice method 
+            - starting at the beginning of the index (which is 0), to the end of the index(array)
+            - Then reverse();
+        - Console log the variable showing the array being reversed 
 
+    */
 
+    
+    let myOtherReveredArray = [20, 50, 30, 60, 200];
+    let moreReveredArrays = myOtherReveredArray.slice(0, myOtherReveredArray.length).reverse();
+
+    console.log(moreReveredArrays);
 
 
 
@@ -193,5 +241,4 @@ for(let i = 0; i <= 4; i++) {
 
      fizzBuzz();
   
-
-    
+     

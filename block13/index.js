@@ -41,7 +41,7 @@
         const number2 = 6;
 
     //if both parameters are greater than or equal to 5, print true
-         if (number1 && number2 >= 5) {
+         if (number1 >=5 && number2 >= 5) {
             console.log(true);
          }
 

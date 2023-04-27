@@ -126,8 +126,8 @@ console.log(eleven);
         } else {
           consonantsCount++;
          }
-
     }
+
     console.log(`${myString} has ${consonantsCount} consonants and ${vowelsCount} vowels`);
 
   

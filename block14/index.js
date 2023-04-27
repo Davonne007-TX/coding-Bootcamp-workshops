@@ -103,39 +103,34 @@ console.log(eleven);
     Write an algorithm that accepts a string of lowercase letters. 
     Print the word followed by how many consonants and vowels it has.
    
+     - Declare a variable myString, to a word
+     - Declare two variables, one for number of vowels and one for number of consonants
+     - Create a variable for vowels, as a string, name vowels 
+     - Create a for loop, looping though myString 
+        - set a variable to myString[i]
+        - create an if statement to check for vowels and consonants
+    - Console.log results 
 
-    - Set an empty array
-    - Set the array of lowercase words you would like to test
-    - Create a for loop, that loops the array less than or equal to 4, iterating each time
-    - Create an if statement, that catches the array[i] and if its equal to each word
-        - Create else if statements for each word in the array
-        - Console log how many vowels it has an how many consonants for each word
-       
 */
 
-const ourWord = [];
-let myWords = ["hello", "ukelele", "awesome", "onomonpia", "textbook"];
+    let myString = "awesome";
+    let consonantsCount = 0;
+    let vowelsCount = 0;
 
-for(let i = 0; i <= 4; i++) {
-    if(myWords[i] === "hello") {
-        console.log("hello has 3 consonants and 2 vowels")
+    const vowels = "aeiou";
 
-    }
-    else if (myWords[i] === "ukelele") {
-        console.log("ukelele has 3 consonants and 4 vowels");
-    }
-    else if (myWords[i] === "awesome") {
-        console.log("awesome has 3 consonants and 4 vowels");
-    }
-    else if (myWords[i] === "onomonopia") {
-        console.log("onomonopia has 4 consonants and 6 vowels");
+    for (let i = 0; i < myString.length; i++) {
+        let currentChar = myString[i];
+        if (vowels.includes(currentChar)) {
+          vowelsCount++;
+        } else {
+          consonantsCount++;
+         }
 
     }
-    else if (myWords[i] === "textbook") {
-        console.log("textbook has 5 consonants and 3 vowels");    }
-}
+    console.log(`${myString} has ${consonantsCount} consonants and ${vowelsCount} vowels`);
 
-
+  
 
 //Reverse Array 
 

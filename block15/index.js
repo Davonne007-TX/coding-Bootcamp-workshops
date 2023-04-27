@@ -22,6 +22,8 @@
 */
 
 
+
+//Create an object named customer with key:value pairs
 let customer = {
     firstName: "jake",
     lastName: "smith",
@@ -37,6 +39,7 @@ let customer = {
 console.log(Object.entries(customer));
 console.table(customer);
 
+//modify properties
 customer["email"] = "Jak3Smith1992@email.com";
 customer["phone"] = 3195551234;
 customer["zipCode"] = "63132";
@@ -44,10 +47,12 @@ customer["favoriteFlavors"] = ["strawberry", "matcha"];
 
 console.log(customer);
 
+//delete properties
 delete customer["zipCode"];
 delete customer ["favoriteStore"];
 console.log(customer);
 
+//add more properties 
 customer.toppings = ["chocolate sprinkles", "wafer straws", "gummy bears"];
 customer.futureFlavors = "mango";
 customer.todaysPurchaseCost = 5.32;

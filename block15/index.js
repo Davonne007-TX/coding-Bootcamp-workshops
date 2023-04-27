@@ -3,7 +3,7 @@
 
 /*
 
-   - Create an object name customer with a set of keys:value pairs (for a survey) 
+   - Create an object name customer with a set of keys:value pairs
     - Console.log object to check work and console.table
 
    - Modify the following properties:

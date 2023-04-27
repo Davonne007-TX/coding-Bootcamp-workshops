@@ -43,7 +43,7 @@ console.table(customer);
 customer["email"] = "Jak3Smith1992@email.com";
 customer["phone"] = 3195551234;
 customer["zipCode"] = "63132";
-customer["favoriteFlavors"] = ["strawberry", "matcha"];
+customer["favoriteFlavors"] = ["coffee", "strawberry", "matcha"];
 
 console.log(customer);
 

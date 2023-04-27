@@ -24,7 +24,7 @@
 
 
 //Create an object named customer with key:value pairs
-let customer = {
+const customer = {
     firstName: "jake",
     lastName: "smith",
     email: "jaekSmih!aol.com",

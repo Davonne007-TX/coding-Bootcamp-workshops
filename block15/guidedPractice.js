@@ -17,7 +17,7 @@ const dinner = {
  
  //Add the values of the dinner object,
    // to calculate the total cost of the meal
-const prices = Object.values(dinner);
+let prices = Object.values(dinner);
 let totalCost = 0;
 
 for(let i = 0; i < prices.length; i++) {

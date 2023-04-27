@@ -1,5 +1,5 @@
 //Declare an object name dinner
-let dinner = {
+const dinner = {
     cheeseBurger: 12,
     steak: 20,
     soup: 8,

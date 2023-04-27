@@ -9,7 +9,15 @@
     returns a new array with only the odd numbers from the original array. 
     If there is only one odd number in the array, return an array with that single value.
     
-*/
+    
+   - Declare an empty array name odd numbers to use later
+   - Create an array with a set of numbers
+   - Create a for loop, to check  array, if its odd using %
+   - If its odd add it to the empty array, 
+       pushing the empty array into i
+   - Console.log odd numbers
+
+   */
 
 let oddNumbers = [];
 let myNumbers = [2, 4, 6, 8, 11, 20, 15, 22];

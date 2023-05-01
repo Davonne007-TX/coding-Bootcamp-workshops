@@ -15,7 +15,7 @@
 
     If the customer has a coupon, the customer will receive a $10 discount after the subscription
     discount has been calculated.
-    
+
     At the end of the script, you should return and log the string "Your grand total is ${finalAmount}."
 
 */
@@ -48,7 +48,7 @@ const timmy = {
   }
 
   //Code a function that have three arguments consisting of refills, subscription, and coupons
-    //If customer has a subscription calculate the total total with 25% discount
+    //Create an if statement, If customer has a subscription calculate the total total with 25% discount
     // If the customer has a coupon, calculate the total, customer receives a $10 discount
     //return total
   function calculateTotal(refillTotal, hasSubscription, hasCoupon) {

@@ -5,7 +5,8 @@
     the product of the two input numbers.
 
     UNIT TESTS:
-    ==> Except a function to be an arrow function or with the key word function
+    ==> Except a function to be an arrow function or with the key word function, the 
+    function should be named multiplication 
     ==> Except the function to take two numbers as arguments, num1 and num2
     ==> Expect function to declare a variable that takes num1 and num2
      and multiplies them together

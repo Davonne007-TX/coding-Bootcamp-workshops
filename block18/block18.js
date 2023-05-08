@@ -34,6 +34,7 @@
         UNIT TESTS: 
         ==> Expect an arrow function or a function with the keyword function
         ==> Except function to have two arrays as arguments (array1, array2)
+        ==> Except to throw an error if there are no arguments 
         ==> Except function to declare a variable to combine the two arrays using concat
         ==> Except function to take that said variable, to filter out the even numbers, 
         using the filter method

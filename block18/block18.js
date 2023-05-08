@@ -80,7 +80,8 @@
       ==> Expect page to prompt user to go to check out menu if continue as guest is selected
       ==> Except page to have user enter their credit card information 
       ==> User is able to enter in a promo code if they have one
-      ==> User is able to review their order and able to edit/delete their order
+      ==> User is able to review their order 
+      ==> User is able to edit/delete their order
       ==> User is able to confirm stores location 
       ==> User is able to change locations 
       ==> User is able to submit order and run their transaction 

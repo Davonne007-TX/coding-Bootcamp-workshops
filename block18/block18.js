@@ -1,5 +1,7 @@
 // Block 18 Workshop: Writing Test Specifications 
 
+//IMPORTANT: After todays lecture will look over how I wrote these tests, since I did them different from todays lecture 
+
 /* 
     Prompt 1 - A function called "multiplication" that returns
     the product of the two input numbers.

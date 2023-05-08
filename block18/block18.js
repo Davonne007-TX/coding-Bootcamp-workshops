@@ -56,6 +56,41 @@
 
 
 
+/* 
+      Prompt 3 - A shopping cart checkout feature that allows a user to check out as a guest (without an account), or as a logged-in user.
+      They should be allowed to do either, but should be asked if they want to create an account or log in if they check out as a guest.
+
+      FUNCTIONAL TESTS:
+      ==> User is able to order food by clicking button that says start order
+      ==> User is taken to a page to enter their zip code to show closest store via text input     
+      ==> User is directed to select carry out or delivery 
+      ==> User submits button for current location 
+      ==> User sees a pop up message and selects closest location from given zip code
+      ==> Except to show a message if no store locations are located near you
+      ==> Except to show locations that are closed
+      ==> User is taken to page that shows stores menu
+      ==> Except to show foods items that are unavailable 
+      ==> User sees prices for the food
+      ==> User selects their order for food via text, images and buttons 
+      ==> User selects the button add to order 
+      ==> User is able to click the button that says checkout, once order is complete 
+      ==> User is directed to sign in, create an account, or sign in as guest via buttons
+      ==> Expect page to prompt user to sign in if they have an account and then taken to check out menu
+      ==> Except page to prompt user to create an account if button is selected, and when finished taken to check out menu
+      ==> Expect page to prompt user to go to check out menu if continue as guest is selected
+      ==> Except page to have user enter their credit card information 
+      ==> User is able to enter in a promo code if they have one
+      ==> User is able to review their order and able to edit/delete their order
+      ==> User is able to confirm stores location 
+      ==> User is able to change locations 
+      ==> User is able to submit order and run their transaction 
+      ==> User is shown errors if credit card information does not go through 
+      ==> User is prompt to correct credit card information 
+      ==> User is shown a processing bar, showing their order being processed
+      ==> User is directed to a screen that shows the time of pick up or when food will be delivered 
+      ==> If user selected continue as guest, user is shown a screen that says create an account to gain points 
+
+  */
 
 
 

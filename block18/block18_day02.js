@@ -75,3 +75,17 @@ function bacteriaTime (currentNum, targetNum) {
     amount of times each letter appeared in the string.
 
 */
+
+function frequencyAnalysis(string) {
+  const result = {};
+  
+  for(let i = 0; i < string.length; i++) {
+    const character = string[i];
+    if(result[character]) {
+      result[character]++;
+    } else {
+      result[character] = 1;
+    }
+  }
+  return result;
+}

@@ -5,7 +5,6 @@
 /*--------------------/*
 
 /*
-
     Bacteria Time:
 
     Define a function, bacteriaTime, that accepts two arguments:
@@ -43,8 +42,8 @@ function bacteriaTime (currentNum, targetNum) {
 
 //
 
-/*
 
+/*
     Most Vowels:
 
       Define a function, mostVowels, that accepts one argument,
@@ -76,16 +75,7 @@ function bacteriaTime (currentNum, targetNum) {
 
 */
 
-function frequencyAnalysis(string) {
-  const result = {};
-  
-  for(let i = 0; i < string.length; i++) {
-    const character = string[i];
-    if(result[character]) {
-      result[character]++;
-    } else {
-      result[character] = 1;
-    }
-  }
-  return result;
-}
+
+
+
+ 

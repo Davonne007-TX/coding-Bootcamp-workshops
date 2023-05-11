@@ -76,6 +76,19 @@ function bacteriaTime (currentNum, targetNum) {
 */
 
 
+function frequencyAnalysis(string) {
+  const result = {};
+  
+  for(let i = 0; i < string.length; i++) {
+    const character = string[i];
+    if(result[character]) {
+      result[character]++;
+    } else {
+      result[character] = 1;
+    }
+  }
+  return result;
+}
 
 
  

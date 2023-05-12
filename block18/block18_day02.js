@@ -58,11 +58,37 @@ function bacteriaTime (currentNum, targetNum) {
 
   */
 
-  
+    function mostVowels(string) {
+      let mostVowelsWord = "";
+      let mostVowelsCount = 0;
+      let wordsArray = string.split(" ");
+      let vowels = "aeiouAEIOU";
+
+      for (let i = 0; i < wordsArray.length; i++) {
+        let currentWord = wordsArray[i];
+        let currentVowelsCount = 0;
+
+      for (let j = 0; j < currentWord.length; j++) {
+          let currentLetter = currentWord[j];
+          if (vowels.includes(currentLetter)) {
+            currentVowelsCount++;
+          }
+        }
+        if (currentVowelsCount > mostVowelsCount) {
+          mostVowelsCount = currentVowelsCount;
+          mostVowelsWord = currentWord;
+          }
+        }
+        if (mostVowelsWord.includes(".")) {
+          return mostVowelsWord.replace(".", "");
+        }
+        if (mostVowelsWord.includes("?")) {
+          return mostVowelsWord.replace("?", "");
+        }
+        return mostVowelsWord;
+      }
       
-
-
-  
+      
 /*  
 
     Frequency Analysis 

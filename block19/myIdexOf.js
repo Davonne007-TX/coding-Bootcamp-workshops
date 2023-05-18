@@ -22,6 +22,6 @@
     Hint: Javascript's .slice string method may be useful here.
 
     Do not use the built-in .indexOf string method in your answer.
-     Feel free to use it in all future workshop problems though!
+    Feel free to use it in all future workshop problems though!
 
 */

@@ -8,6 +8,7 @@
     originalString (string)
     startIdx (number, optional)
     endIdx (number, optional)
+    
     mySlice should return a string. The returned string should be a
     copy of the original string. If the user defines a startIdx, the
     returned string should start at that index:
@@ -27,3 +28,29 @@
     Do not use the built in .slice string method. Feel free to use 
     it in all future workshop problems, though!
 */
+
+function mySlice(originalString, startIdx, endIdx) {
+    if(typeof originalString !== "string") {
+      return null;
+    }
+    
+    const original = originalString.length;
+    startIdx = startIdx || 0;
+    endIdx = endIdx || original;
+    
+    if(startIdx < 0) {
+      startIdx = Math.max(original + startIdx, 0)
+    } 
+    
+    if (endIdx < 0) {
+      endIdx = Math.max(original + endIdx, 0)
+    }
+    
+    let mySlicedString = "";
+    
+    for(let i = startIdx; i < endIdx && i < original; i++) {
+      mySlicedString += originalString[i];
+    }
+    
+    return mySlicedString;
+  }//last curly

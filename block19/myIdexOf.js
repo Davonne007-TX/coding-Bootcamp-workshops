@@ -25,3 +25,15 @@
     Feel free to use it in all future workshop problems though!
 
 */
+
+function myIndexOf(source, searchValue, startIdx) {
+    startIdx = startIdx || 0;
+    
+    for(let i = startIdx; i < source.length; i++) {
+      if(source.slice(i, i + searchValue.length) === searchValue) {
+        return i;
+      }
+    }
+    
+    return -1;
+  }// last curly

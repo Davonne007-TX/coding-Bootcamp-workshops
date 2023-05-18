@@ -22,13 +22,13 @@ function zeroDarkThirty(number) {
     }
     
     let numberString = number.toString();
-    let resultString = numberString.replace(/0/g, '');
+    let resultString = numberString.replace(/0/g, "");
     
     let result = parseFloat(resultString);
     
     return result;
   
-  } //last curly
+  } 
   
   
   

@@ -23,5 +23,5 @@ function exponentiate(base, power) {
     return product;
    }
 
-//
+
 

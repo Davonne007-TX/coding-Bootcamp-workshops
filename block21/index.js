@@ -42,11 +42,11 @@ function Car(make, model, year) {
         this.make = make;
         this.model = model;
         this.year = year;
-    }
+   }
 
     Car.prototype.getDescription = function() {
         return "This car is a " + this.make + " " + this.model + " " + this.year; 
-      };
+    };
 
        
      function ElectricCar (make, model, year, range) {

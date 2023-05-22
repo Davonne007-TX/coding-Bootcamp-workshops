@@ -27,3 +27,29 @@
     containing the make, model, year, and range of the electric car.
 
 */
+
+function Car(make, model, year) {
+        this.make = make;
+        this.model = model;
+        this.year = year;
+    }
+
+    Car.prototype.getDescription = function() {
+        return "This car is a " + this.make + " " + this.model + " " + this.year; 
+      };
+
+       
+     function ElectricCar (make, model, year, range) {
+        Car.call(this, make, model, year);
+        this.range = range; 
+     }
+
+     ElectricCar.prototype = Object.create(Car.prototype);
+     ElectricCar.prototype.constructor = ElectricCar;
+
+     ElectricCar.prototype.getDescription = function() {
+        return "We have an awesome car is that is a " + this.make + " " + this.model + " " + this.year + " " + "with a range of " + this.range + " " + "miles";
+     }
+
+     let elonMusk = new ElectricCar("Tesla", "Model X,", 2023, 150);
+     console.log(elonMusk.getDescription());

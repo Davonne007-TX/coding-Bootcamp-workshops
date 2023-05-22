@@ -63,6 +63,3 @@
 
      let elonMusk = new ElectricCar("Tesla", "Model X,", 2023, 150);
      console.log(elonMusk.getDescription());
-
-     //
-     console.log("more tests");

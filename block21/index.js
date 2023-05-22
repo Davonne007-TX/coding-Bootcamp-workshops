@@ -2,7 +2,17 @@
 
 /*
 
-    Project Requirements:
+    The automotive industry comprises a wide range of companies and organizations involved in the
+    design, development, manufacturing, marketing, and selling of motor vehicles.
+
+    There is a world of choice in today's car market, what with more than 400 different
+    models available.
+
+    In this workshop, you will be tasked with coding a virtual assembly line to create some
+    different types of vehicles with as many as the same parts as you possibly can.
+
+
+    //Project Requirements:
 
     1. Create file index.js to work in.
 

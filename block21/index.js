@@ -38,31 +38,34 @@
 
 */
 
-    function Car(make, model, year) {
+class Car {
+    constructor(make, model, year) {
         this.make = make;
         this.model = model;
         this.year = year;
     }
+    getDescription() {
+        return "This Car is a " + this.make + " " + this.model + " " + this.year + " and has a range of " + this.range;  
+    }
+}
 
-    Car.prototype.getDescription = function() {
-        return "This car is a " + this.make + " " + this.model + " " + this.year; 
-    };
+class ElectricCar extends Car {
+    constructor(make, model, year, range) {
+        super(make, model, year);
+        this.range = range;
+    }
+}
 
-       
-     function ElectricCar (make, model, year, range) {
-        Car.call(this, make, model, year);
-        this.range = range; 
-     }
+let elonMusk = new ElectricCar("Tesla", "Model S", 2019, 300);
 
-     ElectricCar.prototype = Object.create(Car.prototype);
-     ElectricCar.prototype.constructor = ElectricCar;
+if (elonMusk instanceof ElectricCar) {
+    let description = elonMusk.getDescription();
+    console.log(description);
+  } else {
+    console.log("Not an instance of ElectricCar.");
+  }
 
-     ElectricCar.prototype.getDescription = function() {
-        return "We have an awesome car is that is a " + this.make + " " + this.model + " " + this.year + " " + "with a range of " + this.range + " " + "miles";
-     }
 
-     let elonMusk = new ElectricCar("Tesla", "Model X,", 2023, 150);
-     console.log(elonMusk.getDescription());
-
+  
 
      

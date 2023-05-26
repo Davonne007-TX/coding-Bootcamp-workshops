@@ -6,6 +6,20 @@
 
 */
 
+const songContainer = document.getElementById("song-container");
+const newSongForm = document.getElementById("new-song-form");
+
+const MY_MUSIC_API = "http://fsa-async-await.herokuapp.com/";
+
+const fetchAllSongs = async () => {
+    try {
+        const response = await fetch(MY_MUSIC_API);
+        const theData = await response.json();
+        return theData;
+    } catch (error) {
+        console.log(error);
+    }
+}
 
 
 
@@ -34,3 +48,9 @@
 
 
 
+
+
+
+const init = async () => {
+    
+}

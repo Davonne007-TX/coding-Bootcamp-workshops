@@ -87,7 +87,6 @@ function renderNewSongForm() {
         });
     }
   
-
 async function init() {
     const songs = await fetchAllSongs();
     console.log('All songs:', songs);

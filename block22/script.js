@@ -58,7 +58,7 @@ function main() {
  
 main();
 
-//
+//Fetch All Songs
 const fetchAllSongs = async () => {
     try {
         const response = await fetch('http://fsa-async-await.herokuapp.com/api/guided-practice/songs');
@@ -69,6 +69,7 @@ const fetchAllSongs = async () => {
     }
 }
 
+//Render All Songs
 function renderAllSongs(songs) {
     const songContainer = document.getElementById("song-container");
     songContainer.innerHTML = "";
@@ -79,6 +80,7 @@ function renderAllSongs(songs) {
     });
 }
 
+//Add New Song
 async function addNewSong(song) {
     const response = await fetch("http://fsa-async-await.herokuapp.com/api/guided-practice/songs", {
         method: 'POST',
@@ -92,6 +94,7 @@ async function addNewSong(song) {
     return newSong;
 }
 
+//Render New Song Form with Even Listener
 function renderNewSongForm() {
     const newSongForm = document.getElementById("new-song-form");
     newSongForm.innerHTML = `
@@ -127,6 +130,7 @@ function renderNewSongForm() {
         });
     }
   
+//Initiate functions 
 async function init() {
     const songs = await fetchAllSongs();
     console.log(songs);

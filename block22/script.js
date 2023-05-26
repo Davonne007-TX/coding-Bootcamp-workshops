@@ -49,8 +49,7 @@ async function addNewSong(song) {
     });
 
     const newSong = await response.text();
-
-   return newSong;
+    return newSong;
 }
 
 function renderNewSongForm() {
@@ -73,7 +72,7 @@ function renderNewSongForm() {
         event.preventDefault();
         const title = document.getElementById("title").value;
         const artist = document.getElementById("artist").value;
-         const genre = document.getElementById("genre").value;
+        const genre = document.getElementById("genre").value;
         const releaseDate = document.getElementById("release-date").value;
   
         const newSong = {

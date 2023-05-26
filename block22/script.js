@@ -6,4 +6,31 @@
 
 */
 
-console.log("test if connected with index.html ");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

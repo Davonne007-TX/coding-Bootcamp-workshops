@@ -6,4 +6,4 @@
 
 */
 
-console.log("test if connected ");
+console.log("test if connected with index.html ");

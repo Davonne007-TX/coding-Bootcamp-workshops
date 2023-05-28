@@ -1,0 +1,24 @@
+/*html*/
+html {
+    background-color: crimson;
+}
+
+/*headings*/
+h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    text-align: center;
+    font-size: 28pt;
+    text-decoration: underline;
+    text-shadow: 1px 1px red;
+}
+
+/*image*/
+.darthVader {
+    width: 100%;
+    height: auto;
+    max-width: 500p;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border-radius: 8px;
+}

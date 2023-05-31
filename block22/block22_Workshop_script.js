@@ -23,6 +23,7 @@ const getPartyById = async (id) => {
   try {
     const response = await fetch(`${PARTIES_API_URL}/${id}`);
     const party = await response.json();
+    console.log("Single Party:", party);
     return party;
   } catch (error) {
     console.log("Error:", error);
@@ -130,6 +131,7 @@ const renderParties = async (parties) => {
 const init = async () => {
     try {
         const myParties = await getAllParties();
+        await getPartyById(1912);
     } catch (error) {
         console.log("Error:", error);
     }

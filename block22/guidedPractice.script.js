@@ -46,7 +46,7 @@
 */
 
 //Assigning a variable to the API URL
-const MY_MUSIC_API = "http://fsa-async-await.herokuapp.com/api/guided-practice/songs";  //Is this working??? 
+const MY_MUSIC_API = "http://fsa-async-await.herokuapp.com/api/guided-practice/songs";  
 
 //Function for my heading1
 function main() {

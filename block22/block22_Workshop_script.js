@@ -1,10 +1,8 @@
 const newPartyForm = document.querySelector('#new-party-form');
 const partyContainer = document.querySelector('#party-container');
 
-const PARTIES_API_URL =
-  'http://fsa-async-await.herokuapp.com/api/workshop/parties';
-const GUESTS_API_URL =
-  'http://fsa-async-await.herokuapp.com/api/workshop/guests';
+const PARTIES_API_URL ='http://fsa-async-await.herokuapp.com/api/workshop/parties';
+const GUESTS_API_URL ='http://fsa-async-await.herokuapp.com/api/workshop/guests';
 const RSVPS_API_URL = 'http://fsa-async-await.herokuapp.com/api/workshop/rsvps';
 const GIFTS_API_URL = 'http://fsa-async-await.herokuapp.com/api/workshop/gifts';
 
@@ -13,9 +11,10 @@ const getAllParties = async () => {
   try {
     const response = await fetch(PARTIES_API_URL);
     const parties = await response.json();
+    console.log("Parties:", parties);
     return parties;
   } catch (error) {
-    console.error(error);
+    console.log("Error:", error);
   }
 };
 
@@ -26,7 +25,7 @@ const getPartyById = async (id) => {
     const party = await response.json();
     return party;
   } catch (error) {
-    console.error(error);
+    console.log("Error:", error);
   }
 };
 
@@ -88,7 +87,7 @@ const renderSinglePartyById = async (id) => {
       partyDetailsElement.remove();
     });
   } catch (error) {
-    console.error(error);
+    console.log("Error:", error);
   }
 };
 
@@ -123,13 +122,17 @@ const renderParties = async (parties) => {
       });
     });
   } catch (error) {
-    console.error(error);
+    console.log("Error:", error);
   }
 };
 
 // init function
 const init = async () => {
-  // your code here
+    try {
+        const myParties = await getAllParties();
+    } catch (error) {
+        console.log("Error:", error);
+    }
 };
 
 init();

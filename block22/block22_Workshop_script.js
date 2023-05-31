@@ -91,8 +91,8 @@ const renderSinglePartyById = async (id) => {
     const guestsResponse = await fetch(`${GUESTS_API_URL}/party/${id}`);
     const guests = await guestsResponse.json();
 
-    const rsvpsResponse = await fetch(`${RSVPS_API_URL}/party/${id}`);  //???
-    const rsvps = await rsvpsResponse.json(); //???
+    const rsvpsResponse = await fetch(`${RSVPS_API_URL}/party/${id}`); 
+    const rsvps = await rsvpsResponse.json(); 
 
     // create new HTML element to display party details
     const partyDetailsElement = document.createElement('div');

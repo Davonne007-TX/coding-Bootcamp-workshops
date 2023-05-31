@@ -93,27 +93,37 @@ const renderSinglePartyById = async (id) => {
 };
 
 // render all parties
-const renderParties = async (parties) => {
+const renderParties = async () => {
   try {
-    partyContainer.innerHTML = '';
-    parties.forEach((party) => {
-      const partyElement = document.createElement('div');
-      partyElement.classList.add('party');
-      partyElement.innerHTML = `
-                <h2>${party.name}</h2>
-                <p>${party.description}</p>
-                <p>${party.date}</p>
-                <p>${party.time}</p>
-                <p>${party.location}</p>
-                <button class="details-button" data-id="${party.id}">See Details</button>
-                <button class="delete-button" data-id="${party.id}">Delete</button>
-            `;
-      partyContainer.appendChild(partyElement);
+    const partyContainer = document.getElementById("party-container");
+    const allParties = await getAllParties();
+
+    allParties.forEach((party) => {
+        const partyElement = document.createElement('div');
+        partyElement.innerHTML = `
+                  <h2>${party.name}</h2>
+                  <p>${party.description}</p>
+                  <p>${party.date}</p>
+                  <p>${party.time}</p>
+                  <p>${party.location}</p>
+                  <button class="details-button" data-id="${party.id}">See Details</button>
+                  <button class="delete-button" data-id="${party.id}">Delete</button>
+              `;
+        partyContainer.appendChild(partyElement);
+
+    });
+    
+    
+    
+    
+    
+    
 
       // see details
       const detailsButton = partyElement.querySelector('.details-button');
       detailsButton.addEventListener('click', async (event) => {
-        // your code here
+        const partyId = event.target.dataset.id;
+        await renderSinglePartyById(partyId);
       });
 
       // delete party
@@ -121,7 +131,7 @@ const renderParties = async (parties) => {
       deleteButton.addEventListener('click', async (event) => {
         // your code here
       });
-    });
+
   } catch (error) {
     console.log("Error:", error);
   }
@@ -132,6 +142,8 @@ const init = async () => {
     try {
         const myParties = await getAllParties();
         await getPartyById(1912);
+        renderParties();
+        
     } catch (error) {
         console.log("Error:", error);
     }

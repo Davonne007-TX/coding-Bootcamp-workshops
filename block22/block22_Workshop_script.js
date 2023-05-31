@@ -1,12 +1,44 @@
+//Block 22 Workshop: Party Logs
+
+/*
+
+    Follow these instructions to get started and use the API above to complete the workshop
+
+    *********
+
+    1. Clone this repoLinks to an external site. repository to your local computer.
+
+    2. Navigate into the project and open it in VScode.
+
+    3. Launch the index.html file with Live Server.
+
+    4. Uh oh! Our page is not rendering properly. Find the missing functions.
+
+    5. Once you have the functions working, you should see a list of parties, but the
+    details button is broken. Write code in the script.js file to fix it.
+
+    6. After the details button is working, you should see details of the party,
+    but some values are returning undefined. Debug the problem.
+
+    7. Finally, write code that enables the "delete" button.
+
+    8. Now that the application is working as expected, add color, size, shape,
+    and position to elements using CSS. 
+
+*/
+
+//The ids from html 
 const newPartyForm = document.querySelector('#new-party-form');
 const partyContainer = document.querySelector('#party-container');
 
+//APIS URLS, assigned to variables
 const PARTIES_API_URL ='http://fsa-async-await.herokuapp.com/api/workshop/parties';
 const GUESTS_API_URL ='http://fsa-async-await.herokuapp.com/api/workshop/guests';
 const RSVPS_API_URL = 'http://fsa-async-await.herokuapp.com/api/workshop/rsvps';
 const GIFTS_API_URL = 'http://fsa-async-await.herokuapp.com/api/workshop/gifts';
 
 // get all parties
+//this shows the parties in the console 
 const getAllParties = async () => {
   try {
     const response = await fetch(PARTIES_API_URL);
@@ -19,6 +51,7 @@ const getAllParties = async () => {
 };
 
 // get single party by id
+//this shows a party by a single id
 const getPartyById = async (id) => {
   try {
     const response = await fetch(`${PARTIES_API_URL}/${id}`);
@@ -30,22 +63,34 @@ const getPartyById = async (id) => {
   }
 };
 
-// delete party
+// delete a party
 const deleteParty = async (id) => {
-  // your code here
+    try {
+        const response = await fetch(`${PARTIES_API_URL}/${id}`,{
+            method: "DELETE",
+        });
+
+        const result = await response.text();
+        console.log("Deleted:", result);
+
+        const partyElement = document.querySelector(`[data-id="${id}"]`);
+        if(partyElement) {
+            partyElement.remove();
+        }
+    } catch (error) {
+        console.log("Error: ", error);
+    }
 };
+    
 
 // render a single party by id
 const renderSinglePartyById = async (id) => {
   try {
-    // fetch party details from server
-    const party = await getPartyById(id);
+    const party = await getPartyById(id); // fetch party details from server
 
-    // GET - /api/workshop/guests/party/:partyId - get guests by party id
     const guestsResponse = await fetch(`${GUESTS_API_URL}/party/${id}`);
     const guests = await guestsResponse.json();
 
-    // GET - /api/workshop/rsvps/party/:partyId - get RSVPs by partyId
     const rsvpsResponse = await fetch(`${RSVPS_API_URL}/party/${id}`);
     const rsvps = await rsvpsResponse.json();
 
@@ -76,8 +121,6 @@ const renderSinglePartyById = async (id) => {
               .join('')}
           </ul>
           
-
-
             <button class="close-button">Close</button>
         `;
     partyContainer.appendChild(partyDetailsElement);
@@ -99,7 +142,7 @@ const renderParties = async () => {
     const allParties = await getAllParties();
 
     allParties.forEach((party) => {
-        const partyElement = document.createElement('div');
+        const partyElement = document.createElement("div");
         partyElement.innerHTML = `
                   <h2>${party.name}</h2>
                   <p>${party.description}</p>
@@ -110,40 +153,32 @@ const renderParties = async () => {
                   <button class="delete-button" data-id="${party.id}">Delete</button>
               `;
         partyContainer.appendChild(partyElement);
-
-    });
     
-    
-    
-    
-    
-    
-
-      // see details
-      const detailsButton = partyElement.querySelector('.details-button');
-      detailsButton.addEventListener('click', async (event) => {
-        const partyId = event.target.dataset.id;
-        await renderSinglePartyById(partyId);
+        // see details
+        const detailsButton = partyElement.querySelector('.details-button');
+        detailsButton.addEventListener('click', async (event) => {
+            const partyId = event.target.dataset.id;
+         await renderSinglePartyById(partyId);
       });
+    
 
-      // delete party
+      // delete a party
       const deleteButton = partyElement.querySelector('.delete-button');
       deleteButton.addEventListener('click', async (event) => {
-        // your code here
+        const partyId = event.target.dataset.id;
+        await deleteParty(partyId);
       });
-
+    });
   } catch (error) {
-    console.log("Error:", error);
+        console.log("Error:", error);
   }
 };
 
-// init function
+// initiate functions
 const init = async () => {
     try {
-        const myParties = await getAllParties();
         await getPartyById(1912);
         renderParties();
-        
     } catch (error) {
         console.log("Error:", error);
     }

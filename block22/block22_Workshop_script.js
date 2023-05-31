@@ -88,28 +88,11 @@ const renderSinglePartyById = async (id) => {
   try {
     const party = await getPartyById(id); // fetch party details from server
 
-    const guestsResponse = await fetch(`${GUESTS_API_URL}/party/${id}`);   //???
-
-    const guests = await guestsResponse.json();//???
+    const guestsResponse = await fetch(`${GUESTS_API_URL}/party/${id}`);
+    const guests = await guestsResponse.json();
 
     const rsvpsResponse = await fetch(`${RSVPS_API_URL}/party/${id}`);  //???
-
     const rsvps = await rsvpsResponse.json(); //???
-
-    // console.log("Title:", party.title);
-    // console.log("Event:", party.event);
-    // console.log("City:", party.city);
-    // console.log("State:", party.state);
-    // console.log("Country:", party.country);
-    // console.log("Guests:");
-
-    guests.forEach((guest, index) => {
-        console.log("RSVP Status:", rsvps[index].status)
-    });
-
-    // GET - get all gifts by party id - /api/workshop/parties/gifts/:partyId -BUGGY?
-    // const giftsResponse = await fetch(`${PARTIES_API_URL}/party/gifts/${id}`);
-    // const gifts = await giftsResponse.json();
 
     // create new HTML element to display party details
     const partyDetailsElement = document.createElement('div');
@@ -148,7 +131,7 @@ const renderSinglePartyById = async (id) => {
   }
 }
 
-// render all parties
+// render all parties on the browser
 const renderParties = async () => {
   try {
     const partyContainer = document.getElementById("party-container");
@@ -166,8 +149,9 @@ const renderParties = async () => {
                   <button class="delete-button" data-id="${party.id}">Delete</button>
               `;
 
-        //styles     
         partyContainer.appendChild(partyElement);
+
+        //styles     
         partyContainer.style.fontFamily = "sans-serif";
         partyContainer.style.fontSize = "16pt;"
         partyElement.style.color = "#B26265";
@@ -183,7 +167,7 @@ const renderParties = async () => {
         const detailsButton = partyElement.querySelector('.details-button');
         detailsButton.addEventListener('click', async (event) => {
             const partyId = event.target.dataset.id;
-         await renderSinglePartyById(partyId, partyContainer);
+            await renderSinglePartyById(partyId);
       });
     
       // delete a party

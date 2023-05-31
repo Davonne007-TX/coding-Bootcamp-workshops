@@ -182,7 +182,7 @@ const renderParties = async () => {
       deleteButton.addEventListener('click', async (event) => {
         const partyId = event.target.dataset.id;
         await deleteParty(partyId);
-        
+
       });
     });
   } catch (error) {

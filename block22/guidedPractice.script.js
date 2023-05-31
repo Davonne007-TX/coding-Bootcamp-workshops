@@ -1,6 +1,5 @@
 //Guided Practice Block 22
 
-
 /*
 
     In this activity, you will be working to create a website that allows users,
@@ -55,12 +54,11 @@ function main() {
     const root = document.getElementById("main");
     const heading1 = document.createElement("h1");
     heading1.innerHTML = "My Music";
-    heading1.style.textAlign = "left";
+    heading1.style.textAlign = "center";
     heading1.style.color = "white";
     heading1.style.fontSize = "30pt";
     heading1.style.textDecoration = "underline";
-    heading1.style.fontFamily = '"Lobster", cursive';   //this has to be wrapped in single and double quotes, since its a font style(already in quotes)
-    heading1.style.textAlign = "center";  
+    heading1.style.fontFamily = '"Lobster", cursive'; 
     
     root.appendChild(heading1);
 }
@@ -120,7 +118,7 @@ async function addNewSong(song) {
 
 
 //Render New Song Form w/ Event Listener 
-const newSongForm = document.getElementById("new-song-form");  //grabbing the new-song-form from the div html, declaring it a variable
+const newSongForm = document.getElementById("new-song-form");  
 newSongForm.innerHTML = `
    <form id="newFormEntry">
         <label for="title">Title</label>
@@ -141,7 +139,7 @@ newFormEntry.style.fontSize = "16pt";
 newSongForm.style.textAlign = "center";
 
 
-newSongForm.addEventListener("submit", async (event) => { /
+newSongForm.addEventListener("submit", async (event) => { 
     event.preventDefault();  
     const title = document.getElementById("title").value; 
     const artist = document.getElementById("artist").value;

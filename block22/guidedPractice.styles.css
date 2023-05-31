@@ -1,4 +1,15 @@
 /*html*/
 html {
-    background-color: #FA6B99;
+    background-color: #E67E82;
+}
+
+/*images*/
+.cdImage {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding: 40px;
 }

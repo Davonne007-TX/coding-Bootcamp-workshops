@@ -45,9 +45,8 @@
 
 */
 
+//Assigning a variable to the API URL
 const MY_MUSIC_API = "http://fsa-async-await.herokuapp.com/api/guided-practice/songs";  //Is this working??? 
-
-
 
 //Function for my heading1
 function main() {
@@ -113,7 +112,7 @@ async function addNewSong(song) {
         return newSong; 
     } catch (error) {
         console.log("Error:", error);
-       }
+    }
 }
 
 
@@ -176,4 +175,7 @@ async function init() {
 }
     
 init();
+
+
+
 

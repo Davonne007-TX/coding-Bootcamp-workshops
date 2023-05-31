@@ -84,22 +84,24 @@ const deleteParty = async (id) => {
     
 
 // render a single party by id
-const renderSinglePartyById = async (id, partyContainer) => {
+const renderSinglePartyById = async (id) => {
   try {
     const party = await getPartyById(id); // fetch party details from server
-    const guestsResponse = await fetch(`${GUESTS_API_URL}/party/${id}`);
-    const guests = await guestsResponse.json();
 
-    const rsvpsResponse = await fetch(`${RSVPS_API_URL}/party/${id}`);
-    const rsvps = await rsvpsResponse.json();
+    const guestsResponse = await fetch(`${GUESTS_API_URL}/party/${id}`);   //???
 
-    console.log("Party Details:");
-    console.log("Title:", party.title);
-    console.log("Event:", party.event);
-    console.log("City:", party.city);
-    console.log("State:", party.state);
-    console.log("Country:", party.country);
-    console.log("Guests:");
+    const guests = await guestsResponse.json();//???
+
+    const rsvpsResponse = await fetch(`${RSVPS_API_URL}/party/${id}`);  //???
+
+    const rsvps = await rsvpsResponse.json(); //???
+
+    // console.log("Title:", party.title);
+    // console.log("Event:", party.event);
+    // console.log("City:", party.city);
+    // console.log("State:", party.state);
+    // console.log("Country:", party.country);
+    // console.log("Guests:");
 
     guests.forEach((guest, index) => {
         console.log("RSVP Status:", rsvps[index].status)
@@ -135,8 +137,7 @@ const renderSinglePartyById = async (id, partyContainer) => {
             <button class="close-button">Close</button>
         `;
     partyContainer.appendChild(partyDetailsElement);
-                     
-
+    
     // add event listener to close button
     const closeButton = partyDetailsElement.querySelector('.close-button');
     closeButton.addEventListener('click', () => {
@@ -164,7 +165,13 @@ const renderParties = async () => {
                   <button class="details-button" data-id="${party.id}">See Details</button>
                   <button class="delete-button" data-id="${party.id}">Delete</button>
               `;
+
+        //styles     
         partyContainer.appendChild(partyElement);
+        partyContainer.style.fontFamily = "sans-serif";
+        partyContainer.style.fontSize = "16pt;"
+        partyElement.style.color = "#B26265";
+        partyElement.style.margin = "20px";
     
         // see details
         const detailsButton = partyElement.querySelector('.details-button');
@@ -194,6 +201,5 @@ const init = async () => {
         console.log("Error:", error);
     }
 }
-
 
 init();

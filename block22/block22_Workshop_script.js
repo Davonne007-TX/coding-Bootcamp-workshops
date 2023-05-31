@@ -1,4 +1,4 @@
-onst newPartyForm = document.querySelector('#new-party-form');
+const newPartyForm = document.querySelector('#new-party-form');
 const partyContainer = document.querySelector('#party-container');
 
 const PARTIES_API_URL =

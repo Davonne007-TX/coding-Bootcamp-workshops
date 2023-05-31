@@ -172,6 +172,12 @@ const renderParties = async () => {
         partyContainer.style.fontSize = "16pt;"
         partyElement.style.color = "#B26265";
         partyElement.style.margin = "20px";
+        partyElement.style.width = "100%";
+        partyElement.style.maxWidth = "900px";
+        partyElement.style.marginLeft = "auto";
+        partyElement.style.marginRight = "auto";
+        partyElement.style.display = "block";
+
     
         // see details
         const detailsButton = partyElement.querySelector('.details-button');
@@ -203,3 +209,5 @@ const init = async () => {
 }
 
 init();
+
+

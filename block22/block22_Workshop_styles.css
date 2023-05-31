@@ -1,8 +1,12 @@
 /*html*/
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+html {
+    background-color: #F6F5F3;
 }
 
 /*heading*/
@@ -13,7 +17,6 @@ h1 {
     color: #B26265;
     text-decoration: underline;
     margin-top: 40px;
-    
 }
 
 /*details button and delete button*/
@@ -22,4 +25,8 @@ h1 {
     color: #6A6463;
     padding: 5px;
     border-radius: 8px;
+    margin-top: 10px;
+    
 }
+
+

@@ -142,8 +142,8 @@ const renderParties = async () => {
         partyElement.innerHTML = `
                   <h2>${party.name}</h2>
                   <p>${party.description}</p>
-                  <p>${party.date}</p>
                   <p>${party.time}</p>
+                  <p>${party.date}</p>
                   <p>${party.location}</p>
                   <button class="details-button" data-id="${party.id}">See Details</button>
                   <button class="delete-button" data-id="${party.id}">Delete</button>
@@ -166,8 +166,15 @@ const renderParties = async () => {
         // see details
         const detailsButton = partyElement.querySelector('.details-button');
         detailsButton.addEventListener('click', async (event) => {
-            const partyId = event.target.dataset.id;
-            await renderSinglePartyById(partyId);
+            const partyElements = document.getElementsByClassName("party");
+            for(const partyElement of partyElements) {
+                partyElement.style.display = "none";
+            }
+            
+            const element = event.target;
+            const dataset = element.dataset;
+            const id = dataset.id;
+            renderSinglePartyById(id);
       });
     
       // delete a party
@@ -175,6 +182,7 @@ const renderParties = async () => {
       deleteButton.addEventListener('click', async (event) => {
         const partyId = event.target.dataset.id;
         await deleteParty(partyId);
+        
       });
     });
   } catch (error) {

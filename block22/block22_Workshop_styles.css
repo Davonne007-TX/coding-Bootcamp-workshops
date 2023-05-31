@@ -1,7 +1,17 @@
 /*html*/
-
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+/*heading*/
+h1 {
+    text-align: center;
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 24pt;
+    color: #B26265;
+    text-decoration: underline;
+    margin-top: 40px;
+    
 }

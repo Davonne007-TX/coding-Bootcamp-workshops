@@ -129,7 +129,7 @@ const renderSinglePartyById = async (id) => {
   } catch (error) {
     console.log("Error:", error);
   }
-}
+};
 
 // render all parties on the browser
 const renderParties = async () => {
@@ -190,7 +190,7 @@ const init = async () => {
     } catch (error) {
         console.log("Error:", error);
     }
-}
+};
 
 init();
 

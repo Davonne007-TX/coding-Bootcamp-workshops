@@ -98,7 +98,7 @@ const renderSinglePartyById = async (id) => {
     const partyDetailsElement = document.createElement('div');
     partyDetailsElement.classList.add('party-details');
     partyDetailsElement.innerHTML = `
-            <h2>${party.title}</h2>
+            <h2>${party.name}</h2>
             <p>Date: ${party.date}</p>
             <p>Description: ${party.description}</p>
             <p>ID: ${party.id}</p>

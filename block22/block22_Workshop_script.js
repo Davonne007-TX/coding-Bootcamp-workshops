@@ -185,7 +185,8 @@ const renderParties = async () => {
       deleteButton.addEventListener('click', async (event) => {
         const partyId = event.target.dataset.id;
         await deleteParty(partyId);
-
+        const parties = await getAllParties();
+        renderParties(parties);
       });
     });
   } catch (error) {

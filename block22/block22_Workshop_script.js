@@ -99,10 +99,12 @@ const renderSinglePartyById = async (id) => {
     partyDetailsElement.classList.add('party-details');
     partyDetailsElement.innerHTML = `
             <h2>${party.title}</h2>
-            <p>Event: ${party.event}</p>
-            <p>City: ${party.city}</p>
-            <p>State: ${party.state}</p>
-            <p>Country: ${party.country}</p>
+            <p>Date: ${party.date}</p>
+            <p>Description: ${party.description}</p>
+            <p>ID: ${party.id}</p>
+            <p>Location: ${party.location}</p>
+            <p>Location: ${party.name}</p>
+            <p>Time: ${party.time}</p>
             <h3>Guests:</h3>
             <ul>
                 ${guests
@@ -142,8 +144,8 @@ const renderParties = async () => {
         partyElement.innerHTML = `
                   <h2>${party.name}</h2>
                   <p>${party.description}</p>
-                  <p>${party.time}</p>
                   <p>${party.date}</p>
+                  <p>${party.time}</p>
                   <p>${party.location}</p>
                   <button class="details-button" data-id="${party.id}">See Details</button>
                   <button class="delete-button" data-id="${party.id}">Delete</button>
@@ -194,7 +196,7 @@ const renderParties = async () => {
 const init = async () => {
     try {
         await getPartyById(1912);
-        renderParties();
+        await renderParties();
     } catch (error) {
         console.log("Error:", error);
     }

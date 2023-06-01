@@ -103,9 +103,9 @@ const renderSinglePartyById = async (id) => {
             <p>Description: ${party.description}</p>
             <p>ID: ${party.id}</p>
             <p>Location: ${party.location}</p>
-            <p>Location: ${party.name}</p>
+            <p>Name: ${party.name}</p>
             <p>Time: ${party.time}</p>
-            <h3>Guests:</h3>
+            <h3>Guests: 200</h3>
             <ul>
                 ${guests
                      .map(

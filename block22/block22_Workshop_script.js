@@ -134,6 +134,9 @@ const renderSinglePartyById = async (id) => {
     const closeButton = partyDetailsElement.querySelector('.close-button');
     closeButton.addEventListener('click', () => {
       partyDetailsElement.remove();
+
+      const parties =  getAllParties();
+      renderParties(parties)
     });
   } catch (error) {
     console.log("Error:", error);
@@ -192,8 +195,6 @@ const renderParties = async () => {
       deleteButton.addEventListener('click', async (event) => {
         const partyId = event.target.dataset.id;
         await deleteParty(partyId);
-        const parties = await getAllParties();
-        renderParties(parties);
       });
     });
   } catch (error) {

@@ -9,7 +9,7 @@ html {
     background-color: #F6F5F3;
 }
 
-/*heading*/
+/*headings*/
 h1 {
     text-align: center;
     font-family: 'Archivo Black', sans-serif;
@@ -19,14 +19,53 @@ h1 {
     margin-top: 40px;
 }
 
-/*details button and delete button*/
+h2 {
+    text-decoration: underline;
+    margin-top: 10px;
+}
+
+/*details button, delete button and close button*/
 .details-button, .delete-button {
     font-family: 'Archivo Black', sans-serif;
     color: #6A6463;
     padding: 5px;
     border-radius: 8px;
     margin-top: 10px;
-    
 }
+
+.details-button:hover {
+    color: black;
+    cursor: pointer;
+}
+
+.delete-button:hover{
+    color: black;
+    cursor: pointer;
+}
+
+.close-button {
+    background-color:#B26265;
+    color: white;
+    font-family:  cursive;
+    font-size: 14pt;
+    padding: 6px;
+    max-width: 100px;
+    border-radius: 12px;
+    margin-top: 10px;
+}
+
+.close-button:hover {
+    color: black;
+    cursor: pointer;
+}
+
+/*divs*/
+#info {
+    width: 100%;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 

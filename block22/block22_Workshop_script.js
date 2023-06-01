@@ -98,7 +98,9 @@ const renderSinglePartyById = async (id) => {
     const partyDetailsElement = document.createElement('div');
     partyDetailsElement.classList.add('party-details');
     partyDetailsElement.innerHTML = `
+          <div id = "info">
             <h2>${party.name}</h2>
+            <br>
             <p>Date: ${party.date}</p>
             <p>Description: ${party.description}</p>
             <p>ID: ${party.id}</p>
@@ -120,8 +122,13 @@ const renderSinglePartyById = async (id) => {
              </ul>
           
             <button class="close-button">Close</button>
+          </div>
         `;
     partyContainer.appendChild(partyDetailsElement);
+
+    partyDetailsElement.style.color = "#B26265";
+    partyDetailsElement.style.fontFamily = "Times New Roman"
+    partyDetailsElement.style.fontSize = "14pt";
     
     // add event listener to close button
     const closeButton = partyDetailsElement.querySelector('.close-button');

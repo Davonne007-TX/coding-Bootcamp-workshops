@@ -141,6 +141,7 @@ const renderParties = async () => {
 
     allParties.forEach((party) => {
         const partyElement = document.createElement("div");
+        partyElement.classList.add("party");
         partyElement.innerHTML = `
                   <h2>${party.name}</h2>
                   <p>${party.description}</p>

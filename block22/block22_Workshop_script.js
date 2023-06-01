@@ -126,6 +126,7 @@ const renderSinglePartyById = async (id) => {
         `;
     partyContainer.appendChild(partyDetailsElement);
 
+    //styles
     partyDetailsElement.style.color = "#B26265";
     partyDetailsElement.style.fontFamily = "Times New Roman"
     partyDetailsElement.style.fontSize = "14pt";
@@ -176,7 +177,7 @@ const renderParties = async () => {
         partyElement.style.display = "block";
 
     
-        // see details
+        // see details, details button
         const detailsButton = partyElement.querySelector('.details-button');
         detailsButton.addEventListener('click', async (event) => {
             const partyElements = document.getElementsByClassName("party");

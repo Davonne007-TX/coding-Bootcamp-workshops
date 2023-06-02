@@ -87,7 +87,6 @@ const deleteParty = async (id) => {
 const renderSinglePartyById = async (id) => {
   try {
     const party = await getPartyById(id); // fetch party details from server
-
     const guestsResponse = await fetch(`${GUESTS_API_URL}/party/${id}`);
     const guests = await guestsResponse.json();
 

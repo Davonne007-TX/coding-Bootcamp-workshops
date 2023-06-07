@@ -194,7 +194,9 @@ const renderParties = async () => {
       const deleteButton = partyElement.querySelector('.delete-button');
       deleteButton.addEventListener('click', async (event) => {
         const partyId = event.target.dataset.id;
-        await deleteParty(partyId);
+        deleteParty(partyId)
+        //get party off page
+        event.target.closest('div.party').remove();
       });
     });
   } catch (error) {

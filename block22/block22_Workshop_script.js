@@ -27,18 +27,20 @@
 
 */
 
-//The ids from html 
-const newPartyForm = document.querySelector('#new-party-form');
-const partyContainer = document.querySelector('#party-container');
+//The ids from html
+const newPartyForm = document.querySelector("#new-party-form");
+const partyContainer = document.querySelector("#party-container");
 
 //APIS URLS, assigned to variables
-const PARTIES_API_URL ='http://fsa-async-await.herokuapp.com/api/workshop/parties';
-const GUESTS_API_URL ='http://fsa-async-await.herokuapp.com/api/workshop/guests';
-const RSVPS_API_URL = 'http://fsa-async-await.herokuapp.com/api/workshop/rsvps';
-const GIFTS_API_URL = 'http://fsa-async-await.herokuapp.com/api/workshop/gifts';
+const PARTIES_API_URL =
+  "http://fsa-async-await.herokuapp.com/api/workshop/parties";
+const GUESTS_API_URL =
+  "http://fsa-async-await.herokuapp.com/api/workshop/guests";
+const RSVPS_API_URL = "http://fsa-async-await.herokuapp.com/api/workshop/rsvps";
+const GIFTS_API_URL = "http://fsa-async-await.herokuapp.com/api/workshop/gifts";
 
 // get all parties
-//this shows the parties in the console 
+//this shows the parties in the console
 const getAllParties = async () => {
   try {
     const response = await fetch(PARTIES_API_URL);
@@ -65,23 +67,22 @@ const getPartyById = async (id) => {
 
 // delete a party
 const deleteParty = async (id) => {
-    try {
-        const response = await fetch(`${PARTIES_API_URL}/${id}`,{
-            method: "DELETE",
-        });
+  try {
+    const response = await fetch(`${PARTIES_API_URL}/${id}`, {
+      method: "DELETE",
+    });
 
-        const result = await response.text();
-        console.log("Deleted:", result);
+    const result = await response.text();
+    console.log("Deleted:", result);
 
-        const partyElement = document.querySelector(`[data-id="${id}"]`);
-        if(partyElement) {
-            partyElement.remove();
-        }
-    } catch (error) {
-        console.log("Error: ", error);
+    const partyElement = document.querySelector(`[data-id="${id}"]`);
+    if (partyElement) {
+      partyElement.remove();
     }
+  } catch (error) {
+    console.log("Error: ", error);
+  }
 };
-    
 
 // render a single party by id
 const renderSinglePartyById = async (id) => {
@@ -90,12 +91,12 @@ const renderSinglePartyById = async (id) => {
     const guestsResponse = await fetch(`${GUESTS_API_URL}/party/${id}`);
     const guests = await guestsResponse.json();
 
-    const rsvpsResponse = await fetch(`${RSVPS_API_URL}/party/${id}`); 
-    const rsvps = await rsvpsResponse.json(); 
+    const rsvpsResponse = await fetch(`${RSVPS_API_URL}/party/${id}`);
+    const rsvps = await rsvpsResponse.json();
 
     // create new HTML element to display party details
-    const partyDetailsElement = document.createElement('div');
-    partyDetailsElement.classList.add('party-details');
+    const partyDetailsElement = document.createElement("div");
+    partyDetailsElement.classList.add("party-details");
     partyDetailsElement.innerHTML = `
           <div id = "info">
             <h2>${party.name}</h2>
@@ -109,15 +110,15 @@ const renderSinglePartyById = async (id) => {
             <h3>Guests: 200</h3>
             <ul>
                 ${guests
-                     .map(
-                         (guest, index) => `
+                  .map(
+                    (guest, index) => `
                           <li>
                              <div>${guest.name}</div>
                              <div>${rsvps[index].status}</div>
                          </li>
             `
-                        )
-                    .join('')}
+                  )
+                  .join("")}
              </ul>
           
             <button class="close-button">Close</button>
@@ -127,16 +128,16 @@ const renderSinglePartyById = async (id) => {
 
     //styles
     partyDetailsElement.style.color = "#B26265";
-    partyDetailsElement.style.fontFamily = "Times New Roman"
+    partyDetailsElement.style.fontFamily = "Times New Roman";
     partyDetailsElement.style.fontSize = "14pt";
-    
+
     // add event listener to close button
-    const closeButton = partyDetailsElement.querySelector('.close-button');
-    closeButton.addEventListener('click', () => {
+    const closeButton = partyDetailsElement.querySelector(".close-button");
+    closeButton.addEventListener("click", () => {
       partyDetailsElement.remove();
 
-      const parties =  getAllParties();
-      renderParties(parties)
+      const parties = getAllParties();
+      renderParties(parties);
     });
   } catch (error) {
     console.log("Error:", error);
@@ -150,9 +151,9 @@ const renderParties = async () => {
     const allParties = await getAllParties();
 
     allParties.forEach((party) => {
-        const partyElement = document.createElement("div");
-        partyElement.classList.add("party");
-        partyElement.innerHTML = `
+      const partyElement = document.createElement("div");
+      partyElement.classList.add("party");
+      partyElement.innerHTML = `
                   <h2>${party.name}</h2>
                   <p>${party.description}</p>
                   <p>${party.date}</p>
@@ -162,58 +163,55 @@ const renderParties = async () => {
                   <button class="delete-button" data-id="${party.id}">Delete</button>
               `;
 
-        partyContainer.appendChild(partyElement);
+      partyContainer.appendChild(partyElement);
 
-        //styles     
-        partyContainer.style.fontFamily = "sans-serif";
-        partyContainer.style.fontSize = "16pt;"
-        partyElement.style.color = "#B26265";
-        partyElement.style.margin = "20px";
-        partyElement.style.width = "100%";
-        partyElement.style.maxWidth = "900px";
-        partyElement.style.marginLeft = "auto";
-        partyElement.style.marginRight = "auto";
-        partyElement.style.display = "block";
+      //styles
+      partyContainer.style.fontFamily = "sans-serif";
+      partyContainer.style.fontSize = "16pt;";
+      partyElement.style.color = "#B26265";
+      partyElement.style.margin = "20px";
+      partyElement.style.width = "100%";
+      partyElement.style.maxWidth = "900px";
+      partyElement.style.marginLeft = "auto";
+      partyElement.style.marginRight = "auto";
+      partyElement.style.display = "block";
 
-    
-        // see details, details button
-        const detailsButton = partyElement.querySelector('.details-button');
-        detailsButton.addEventListener('click', async (event) => {
-            const partyElements = document.getElementsByClassName("party");
-            for(const partyElement of partyElements) {
-                partyElement.style.display = "none";
-            }
-            
-            const element = event.target;
-            const dataset = element.dataset;
-            const id = dataset.id;
-            renderSinglePartyById(id);
+      // see details, details button
+      const detailsButton = partyElement.querySelector(".details-button");
+      detailsButton.addEventListener("click", async (event) => {
+        const partyElements = document.getElementsByClassName("party");
+        for (const partyElement of partyElements) {
+          partyElement.style.display = "none";
+        }
+
+        const element = event.target;
+        const dataset = element.dataset;
+        const id = dataset.id;
+        renderSinglePartyById(id);
       });
-    
+
       // delete a party
-      const deleteButton = partyElement.querySelector('.delete-button');
-      deleteButton.addEventListener('click', async (event) => {
+      const deleteButton = partyElement.querySelector(".delete-button");
+      deleteButton.addEventListener("click", async (event) => {
         const partyId = event.target.dataset.id;
-        deleteParty(partyId)
+        deleteParty(partyId);
         //get party off page
-        event.target.closest('div.party').remove();
+        event.target.closest("div.party").remove();
       });
     });
   } catch (error) {
-        console.log("Error:", error);
+    console.log("Error:", error);
   }
 };
 
 // initiate functions
 const init = async () => {
-    try {
-        await getPartyById(1912);
-        await renderParties();
-    } catch (error) {
-        console.log("Error:", error);
-    }
+  try {
+    await getPartyById(1912);
+    await renderParties();
+  } catch (error) {
+    console.log("Error:", error);
+  }
 };
 
 init();
-
-

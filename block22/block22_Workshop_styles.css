@@ -1,71 +1,69 @@
 /*html*/
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 html {
-    background-color: #F6F5F3;
+  background-color: #f6f5f3;
 }
 
 /*headings*/
 h1 {
-    text-align: center;
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 24pt;
-    color: #B26265;
-    text-decoration: underline;
-    margin-top: 40px;
+  text-align: center;
+  font-family: "Archivo Black", sans-serif;
+  font-size: 24pt;
+  color: #b26265;
+  text-decoration: underline;
+  margin-top: 40px;
 }
 
 h2 {
-    text-decoration: underline;
-    margin-top: 10px;
+  text-decoration: underline;
+  margin-top: 10px;
 }
 
 /*details button, delete button and close button*/
-.details-button, .delete-button {
-    font-family: 'Archivo Black', sans-serif;
-    color: #6A6463;
-    padding: 5px;
-    border-radius: 8px;
-    margin-top: 10px;
+.details-button,
+.delete-button {
+  font-family: "Archivo Black", sans-serif;
+  color: #6a6463;
+  padding: 5px;
+  border-radius: 8px;
+  margin-top: 10px;
 }
 
 .details-button:hover {
-    color: black;
-    cursor: pointer;
+  color: black;
+  cursor: pointer;
 }
 
-.delete-button:hover{
-    color: black;
-    cursor: pointer;
+.delete-button:hover {
+  color: black;
+  cursor: pointer;
 }
 
 .close-button {
-    background-color:#B26265;
-    color: white;
-    font-family:  cursive;
-    font-size: 14pt;
-    padding: 6px;
-    max-width: 100px;
-    border-radius: 12px;
-    margin-top: 10px;
+  background-color: #b26265;
+  color: white;
+  font-family: cursive;
+  font-size: 14pt;
+  padding: 6px;
+  max-width: 100px;
+  border-radius: 12px;
+  margin-top: 10px;
 }
 
 .close-button:hover {
-    color: black;
-    cursor: pointer;
+  color: black;
+  cursor: pointer;
 }
 
 /*divs*/
 #info {
-    width: 100%;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
+  width: 100%;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
-
-
-

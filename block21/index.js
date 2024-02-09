@@ -39,34 +39,29 @@
 */
 
 class Car {
-    constructor(make, model, year) {
-        this.make = make;
-        this.model = model;
-        this.year = year;
-    }
-    getDescription() {
-        //return "This Car is a " + this.make + " " + this.model + " " + this.year + " and has a range of " + this.range;  
-        return `This Car is a ${this.make} ${this.year} and has a range of ${this.range}`;  //you can do it this way as well 
-    }
+  constructor(make, model, year) {
+    this.make = make;
+    this.model = model;
+    this.year = year;
+  }
+  getDescription() {
+    //return "This Car is a " + this.make + " " + this.model + " " + this.year + " and has a range of " + this.range;
+    return `This Car is a ${this.make} ${this.year} and has a range of ${this.range}`; //you can do it this way as well
+  }
 }
 
 class ElectricCar extends Car {
-    constructor(make, model, year, range) {
-        super(make, model, year);
-        this.range = range;
-    }
+  constructor(make, model, year, range) {
+    super(make, model, year);
+    this.range = range;
+  }
 }
 
 let elonMusk = new ElectricCar("Tesla", "Model S", 2019, 300);
 
 if (elonMusk instanceof ElectricCar) {
-    let description = elonMusk.getDescription();
-    console.log(description);
-  } else {
-    console.log("Not an instance of ElectricCar.");
-  }
-
-
-  
-
-     
+  let description = elonMusk.getDescription();
+  console.log(description);
+} else {
+  console.log("Not an instance of ElectricCar.");
+}
